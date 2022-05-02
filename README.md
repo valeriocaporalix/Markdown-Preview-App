@@ -24,8 +24,6 @@ Technical Features:
 
 This app is developed entirely using *React.js* with *Marked Library*.
 
-if you want to download and use this code remember to connect your *MongoDB* database through the server.js file, create your .env file and add your MONGO_URI.
-
 (***Bash Scripting***)
 
 *npm start*
