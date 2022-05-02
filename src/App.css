@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(-45deg, rgb(0, 43, 0), rgb(182, 240, 176), rgb(156, 255, 247), rgb(88, 9, 179));
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated Background */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#core {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'edit'
+    'prev';
+  place-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+#title {
+  margin-top: 10px;
+  grid-area: title;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 4px 4px #444;
+}
+
+#editor {
+  margin-top: -10px;
+  width: 900px;
+  height: 200px;
+  padding: 24px 14px 14px 14px;
+  border: none;
+  border-radius: 5px;
+  grid-area: edit;
+  background: #eee;
+  box-shadow: 0px 5px 10px #444;
+}
+
+#preview {
+  padding: 24px 14px 14px 14px;
+  grid-area: prev;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+
+img[alt=FreeCodeCamp] {
+  width: 500px; 
+}
+
+@media only screen and (max-width: 1050px) {
+  .App {
+    grid-template-areas:
+      'title'
+      'editor'
+      'preview';
+  }
+
+  #editor,
+  #preview {
+    width: 90vw;
+    height: 400px;
+  }
+  img[alt=FreeCodeCamp] {
+    width: 300px
+  }
+}
